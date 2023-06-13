@@ -72,47 +72,53 @@
                                         <div>
                                             <b>Age: </b>{{age}}
                                         </div>
+                                    </span>
+                                    {{/each}}
+                                </div>
 
-                                        {{#if groups}}
+                                {{/each}}
+
+                                <br>
+
+                                {{#if groups}}
+                                <div>
+                                    <span class="badge text-bg-success">
                                         <div>
-                                            <span class="badge text-bg-success">
-                                                <div>
-                                                    <div><b>Groups: </b></div>
-                                                    {{#each groups}}
+                                            <div><b>Groups: </b></div>
+                                            {{#each groups}}
+                                            <div>
+                                                <b>{{name}}</b> ({{id}})
+                                            </div>
+
+                                            <div>
+                                                <b>Description: </b><q>{{description}}</q>
+                                            </div>
+
+                                            <br>
+
+                                            <div>
+                                                <span class="badge text-bg-danger">
+                                                    {{#each members}}
                                                     <div>
                                                         <b>{{name}}</b> ({{id}})
                                                     </div>
 
                                                     <div>
-                                                        <b>Description: </b><q>{{description}}</q>
+                                                        <b>Gender: </b>{{gender}}
                                                     </div>
-
                                                     <div>
-                                                        <span class="badge text-bg-danger">
-                                                            {{#each members}}
-                                                            <div>
-                                                                <b>{{name}}</b> ({{id}})
-                                                            </div>
-
-                                                            <div>
-                                                                <b>Gender: </b>{{gender}}
-                                                            </div>
-                                                            <div>
-                                                                <b>Age: </b>{{age}}
-                                                            </div>
-                                                            {{/each}}
-                                                        </span>
+                                                        <b>Age: </b>{{age}}
                                                     </div>
                                                     {{/each}}
-                                                </div>
-                                            </span>
+                                                </span>
+                                            </div>
+                                            {{/each}}
                                         </div>
-                                        {{else}}
-                                        {{/if}}
                                     </span>
-                                    {{/each}}
                                 </div>
-                                {{/each}}
+                                {{else}}
+                                {{/if}}
+
                             </div>
                         </span>
                         {{/each}}
