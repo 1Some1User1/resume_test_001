@@ -1,0 +1,170 @@
+<div>
+
+    <main>
+        <div>
+            <h1><strong>{{name}}</strong></h1>
+        </div>
+
+        {{#each users}}
+
+        <button type="button" class="btn btn-primary position-relative">
+
+            <div><big><b>Users: </b></big></div>
+
+            <span class="badge text-bg-secondary">
+                <div>
+                    <b>{{name}}</b> ({{id}})
+                </div>
+
+                <div>
+                    <b>Gender: </b>{{gender}}
+                </div>
+                <div>
+                    <b>Age: </b>{{age}}
+                </div>
+
+                <br>
+
+                <span class="badge text-bg-success">
+                    <div>
+                        <div><big><b>Friends: </b></big></div>
+                        {{#each friends}}
+                        <div>
+                            <b>{{name}}</b> ({{id}})
+                        </div>
+
+                        <div>
+                            <b>Gender: </b>{{gender}}
+                        </div>
+                        <div>
+                            <b>Age: </b>{{age}}
+                        </div>
+
+                        <br>
+
+                        <span class="badge text-bg-danger">
+                            <div>
+                                <div><b>Mutual friends: </b></div>
+                                {{#each mutual_friends}}
+                                <div>
+                                    <b>{{name}}</b> ({{id}})
+                                </div>
+
+                                <div>
+                                    <b>Gender: </b>{{gender}}
+                                </div>
+                                <div>
+                                    <b>Age: </b>{{age}}
+                                </div>
+
+                                <div>
+                                    {{#each mutual_friends}}
+                                    <br>
+                                    <span class="badge text-bg-warning">
+                                        <div><b>Mutual friends: </b></div>
+                                        <div>
+                                            <b>{{name}}</b> ({{id}})
+                                        </div>
+
+                                        <div>
+                                            <b>Gender: </b>{{gender}}
+                                        </div>
+                                        <div>
+                                            <b>Age: </b>{{age}}
+                                        </div>
+
+                                        {{#if groups}}
+                                        <div>
+                                            <span class="badge text-bg-success">
+                                                <div>
+                                                    <div><b>Groups: </b></div>
+                                                    {{#each groups}}
+                                                    <div>
+                                                        <b>{{name}}</b> ({{id}})
+                                                    </div>
+
+                                                    <div>
+                                                        <b>Description: </b><q>{{description}}</q>
+                                                    </div>
+
+                                                    <div>
+                                                        <span class="badge text-bg-danger">
+                                                            {{#each members}}
+                                                            <div>
+                                                                <b>{{name}}</b> ({{id}})
+                                                            </div>
+
+                                                            <div>
+                                                                <b>Gender: </b>{{gender}}
+                                                            </div>
+                                                            <div>
+                                                                <b>Age: </b>{{age}}
+                                                            </div>
+                                                            {{/each}}
+                                                        </span>
+                                                    </div>
+                                                    {{/each}}
+                                                </div>
+                                            </span>
+                                        </div>
+                                        {{else}}
+                                        {{/if}}
+                                    </span>
+                                    {{/each}}
+                                </div>
+                                {{/each}}
+                            </div>
+                        </span>
+                        {{/each}}
+                    </div>
+                </span>
+            </span>
+
+            {{#if groups}}
+            <div>
+                <span class="badge text-bg-success">
+                    <div>
+                        <b>Groups: </b>
+                    </div>
+                    <div>
+                        {{#each groups}}
+                        <div>
+                            <b>{{name}}</b> ({{id}})
+                        </div>
+
+                        <div>
+                            <b>Description: </b><q>{{description}}</q>
+                        </div>
+
+                        <br>
+
+                        <div>
+                            <span class="badge text-bg-danger">
+                                {{#each members}}
+                                <div>
+                                    <b>{{name}}</b> ({{id}})
+                                </div>
+
+                                <div>
+                                    <b>Gender: </b>{{gender}}
+                                </div>
+                                <div>
+                                    <b>Age: </b>{{age}}
+                                </div>
+                                {{/each}}
+                            </span>
+                        </div>
+                        {{/each}}
+                    </div>
+                </span>
+            </div>
+            {{else}}
+            {{/if}}
+
+        </button>
+
+        {{/each}}
+
+    </main>
+
+</div>
