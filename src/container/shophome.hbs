@@ -7,7 +7,7 @@
             <div class="nav flex">
                 {{#each links}}
                 <div class="nav-item">
-                    <a href='{{href}}' class="nav-link">{{text}}</a>
+                    <a href='{{href}}' class="nav-link {{#if @last}} disabled {{/if}}">{{text}}</a>
                 </div>
                 {{/each}}
             </div>
@@ -57,7 +57,7 @@
                 {{#each tabs}}
                 <div class="nav-item">
                     <a htref="#"
-                        class="nav-link {{#if isActive}} {{active}} {{else}} {{#if isDisabled}} {{disabled}} {{/if}} {{/if}}">{{text}}
+                        class="nav-link {{#if isActive}} active {{/if}} {{#if isDisabled}} disabled {{/if}}">{{text}}
                     </a>
                 </div>
                 {{/each}}
@@ -127,41 +127,23 @@
 
         <hr class="mt-5 mb-5">
 
-
-
-
-
-
-
-
-
-
-
         <div class="col-12">
             <div class="row">
                 {{#each footer}}
                 <div class="col-2">
-
                     <div class="nav flex">
-
                         <ul>
-
                             {{#each this}}
                             <li class="list-group-item">
 
                                 <div class="nav-item">
-                                    <a href='{{link}}' class="nav-link active">{{text}}</a>
+                                    <a href='{{link}}' class="nav-link {{#if @last}} disabled {{/if}}">{{text}}</a>
                                 </div>
                             </li>
-
                             {{/each}}
-
                         </ul>
-
                     </div>
-
                 </div>
-
                 {{/each}}
             </div>
         </div>
