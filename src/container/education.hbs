@@ -2,8 +2,8 @@
     {{#with main}}
     <main>
         <section>
-            <ul>
-                {{> title data="My educationss" big=true}}
+            {{> title data="My educationss" big=true}}
+            <ul class="ps-5">
                 {{#each education}}
                 <li>{{name}} ({{id}})
                     {{#unless isEnd}} (ще в проесі) {{/unless}}
@@ -15,7 +15,7 @@
 
         <section>
             <div>
-                <ul>
+                <ul class="ps-5">
                     {{> title data="My certificates" big=false}}
                     {{#each certificates}}
                     <li>{{name}} ({{id}})</li>
