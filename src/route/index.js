@@ -2250,7 +2250,7 @@ router.get('/shopprofile', function (req, res) {
 
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('shopprofile', {
-     layout: 'shop',
+    layout: 'shop',
     navigation: {
       links: [
         {
@@ -2267,7 +2267,7 @@ router.get('/shopprofile', function (req, res) {
         },
       ],
     },
-    
+
     header: 'Мої замовлення',
 
     purchase: {
@@ -2438,8 +2438,9 @@ router.get('/shopprofile', function (req, res) {
           },
         ],
       },
-      
-      footer: [
+    },
+
+    footer: [
       [
         {
           text: 'Home',
@@ -2534,8 +2535,7 @@ router.get('/shopprofile', function (req, res) {
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
-  
-    
+
 router.get('/shopcart', function (req, res) {
   // res.render генерує нам HTML сторінку
 
@@ -2558,7 +2558,7 @@ router.get('/shopcart', function (req, res) {
         },
       ],
     },
-             
+
     header: {
       title: 'Кошик',
       button: {
@@ -2683,7 +2683,6 @@ router.get('/shopcart', function (req, res) {
           link: 'https://www.youtube.com/',
         },
       ],
-
     },
 
     footer: [
