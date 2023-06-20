@@ -2791,7 +2791,7 @@ router.get('/shopreview', function (req, res) {
 
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('shopreview', {
-    // layout: 'shop',
+    layout: 'shop',
     navigation: {
       links: [
         {
