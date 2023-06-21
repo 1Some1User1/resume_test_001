@@ -1,190 +1,186 @@
-<div>
+<main class="p-5">
 
-    <main>
+    <section class="text-center">
 
-        <section>
+        <button type="button" class="btn btn-success position-relative">
 
-            <button type="button" class="btn btn-success position-relative">
+            <div>
+                <h1><strong>{{name}}</strong></h1>
+            </div>
+
+            <div>
+                <q>{{description}}</q>
+            </div>
+
+            <div>
+                <b>Price: </b>{{price}} $
+            </div>
+
+            <div>
+                <q>{{category}}</q>
+            </div>
+
+        </button>
+
+    </section>
+
+    <section class="text-center mt-5">
+
+        <button type="button" class="btn btn-primary position-relative">
+
+            {{#with features}}
+
+            <section>
 
                 <div>
-                    <h1><strong>{{name}}</strong></h1>
+                    <span class="badge text-bg-secondary"><big><b>Features: </b></big></span>
                 </div>
 
-                <div>
-                    <q>{{description}}</q>
-                </div>
+            </section>
 
-                <div>
-                    <b>Price: </b>{{price}} $
-                </div>
+            <span class="badge text-bg-warning">
 
-                <div>
-                    <q>{{category}}</q>
-                </div>
 
-            </button>
 
-        </section>
+                {{#with processor}}
+                <div class="pb-2"><b>Processor: </b></div>
 
-        <section>
-
-            <button type="button" class="btn btn-primary position-relative">
-
-                {{#with features}}
-
-                <section>
-
-                    <div>
-                        <span class="badge text-bg-secondary"><big><b>Features: </b></big></span>
-                    </div>
-
-                </section>
-
-                <span class="badge text-bg-warning">
-
-                    <br>
-
-                    {{#with processor}}
-                    <div><b>Processor: </b></div>
-                    <br>
-                    <div><b>Brand: </b>{{brand}}</div>
-                    <div><b>Model: </b>{{model}}</div>
-                    <div><b>Speed: </b>{{speed}}</div>
-                    <div><b>Cores: </b>{{cores}}</div>
-                    <div><b>Cache: </b>{{cache}}</div>
-                    {{/with}}
-
-                </span>
-
-                <span class="badge text-bg-warning">
-
-                    {{#with memory}}
-                    <div><b>Memory: </b></div>
-                    <br>
-                    <div><b>Type: </b>{{type}}</div>
-                    <div><b>Size: </b>{{size}}</div>
-                    <div><b>Speed: </b>{{speed}}</div>
-                    {{/with}}
-
-                </span>
-
-                <span class="badge text-bg-warning">
-
-                    {{#with storage}}
-                    <div><b>Storages: </b></div>
-                    <div><b>Type: </b>{{type}}</div>
-                    <div><b>Size: </b>{{size}}</div>
-                    {{/with}}
-
-                </span>
-
-                <span class="badge text-bg-warning">
-
-                    {{#with display}}
-                    <div><b>Display: </b></div>
-                    <br>
-                    <div><b>Size: </b>{{size}}</div>
-                    <div><b>Resolutio: </b>{{resolutio}}</div>
-                    <div><b>Technology: </b>{{technology}}</div>
-                    <div><b>Color space: </b>{{color_space}}</div>
-                    <div><b>Brightness: </b>{{brightness}}</div>
-                    <div><b>Refresh_rate: </b>{{refresh_rate}}</div>
-                    {{/with}}
-
-                </span>
-
-                <span class="badge text-bg-warning">
-
-                    {{#with graphics}}
-                    <div><b>Graphics: </b></div>
-                    <br>
-                    <div><b>Brand: </b>{{brand}}</div>
-                    <div><b>Model: </b>{{model}}</div>
-                    <div><b>Memory: </b>{{memory}}</div>
-                    {{/with}}
-
-                </span>
-
-                <span class="badge text-bg-warning">
-
-                    <div><b>Ports: </b></div>
-
-                    <br>
-
-                    {{#each ports}}
-                    <div>
-                        <div><b>Type: </b>{{type}}</div>
-                        <div><b>Count: </b>{{count}}</div>
-                        {{#if features}}
-                        <div><b>Feature: </b></div>
-                        <ul>
-                            {{#each features}}
-                            <li>
-                                {{this}}
-                            </li>
-                            {{/each}}
-                        </ul>
-                        {{else}}
-                        {{/if}}
-                    </div>
-                    {{/each}}
-
-                </span>
-
-                <span class="badge text-bg-warning">
-
-                    {{#with battery}}
-                    <div><b>Battery: </b></div>
-                    <br>
-                    <div><b>Type: </b>{{type}}</div>
-                    <div><b>Capacity: </b>{{capacity}}</div>
-                    <div><b>Life: </b>{{life}}</div>
-                    {{/with}}
-
-                </span>
-
-                <span class="badge text-bg-warning">
-
-                    <div><b>Weight: </b>{{weight}}</div>
-
-                </span>
-
-                <span class="badge text-bg-warning">
-
-                    {{#with dimensions}}
-                    <div><b>Dimensions </b></div>
-                    <br>
-                    <div><b>Height: </b>{{height}}</div>
-                    <div><b>Width: </b>{{width}}</div>
-                    <div><b>Depth: </b>{{depthe}}</div>
-                    {{/with}}
-
-                </span>
-
-                <span class="badge text-bg-warning">
-
-                    <div><b>Operating_system: </b>{{operating_system}}</div>
-
-                </span>
-
-                <span class="badge text-bg-warning">
-
-                    <div>
-                        <b>Accessories: </b>
-                        {{#each accessories}}
-                        <div>{{name}}</div>
-                        <div><b>Price: </b>{{price}}</div>
-                        {{/each}}
-                    </div>
-
-                </span>
-
+                <div><b>Brand: </b>{{brand}}</div>
+                <div><b>Model: </b>{{model}}</div>
+                <div><b>Speed: </b>{{speed}}</div>
+                <div><b>Cores: </b>{{cores}}</div>
+                <div><b>Cache: </b>{{cache}}</div>
                 {{/with}}
 
-            </button>
+            </span>
 
-        </section>
+            <span class="badge text-bg-warning">
 
-    </main>
+                {{#with memory}}
+                <div class="pb-2"><b>Memory: </b></div>
 
-</div>
+                <div><b>Type: </b>{{type}}</div>
+                <div><b>Size: </b>{{size}}</div>
+                <div><b>Speed: </b>{{speed}}</div>
+                {{/with}}
+
+            </span>
+
+            <span class="badge text-bg-warning">
+
+                {{#with storage}}
+                <div><b>Storages: </b></div>
+                <div><b>Type: </b>{{type}}</div>
+                <div><b>Size: </b>{{size}}</div>
+                {{/with}}
+
+            </span>
+
+            <span class="badge text-bg-warning">
+
+                {{#with display}}
+                <div class="pb-2"><b>Display: </b></div>
+
+                <div><b>Size: </b>{{size}}</div>
+                <div><b>Resolutio: </b>{{resolutio}}</div>
+                <div><b>Technology: </b>{{technology}}</div>
+                <div><b>Color space: </b>{{color_space}}</div>
+                <div><b>Brightness: </b>{{brightness}}</div>
+                <div><b>Refresh_rate: </b>{{refresh_rate}}</div>
+                {{/with}}
+
+            </span>
+
+            <span class="badge text-bg-warning">
+
+                {{#with graphics}}
+                <div class="pb-2"><b>Graphics: </b></div>
+
+                <div><b>Brand: </b>{{brand}}</div>
+                <div><b>Model: </b>{{model}}</div>
+                <div><b>Memory: </b>{{memory}}</div>
+                {{/with}}
+
+            </span>
+
+            <span class="badge text-bg-warning">
+
+                <div class="pb-2"><b>Ports: </b></div>
+
+                {{#each ports}}
+                <div>
+                    <div><b>Type: </b>{{type}}</div>
+                    <div><b>Count: </b>{{count}}</div>
+                    {{#if features}}
+                    <div><b>Feature: </b></div>
+                    <ul>
+                        {{#each features}}
+                        <li>
+                            {{this}}
+                        </li>
+                        {{/each}}
+                    </ul>
+                    {{else}}
+                    {{/if}}
+                </div>
+                {{/each}}
+
+            </span>
+
+            <span class="badge text-bg-warning">
+
+                {{#with battery}}
+                <div class="pb-2"><b>Battery: </b></div>
+
+                <div><b>Type: </b>{{type}}</div>
+                <div><b>Capacity: </b>{{capacity}}</div>
+                <div><b>Life: </b>{{life}}</div>
+                {{/with}}
+
+            </span>
+
+            <span class="badge text-bg-warning">
+
+                <div><b>Weight: </b>{{weight}}</div>
+
+            </span>
+
+            <span class="badge text-bg-warning">
+
+                {{#with dimensions}}
+                <div class="pb-2"><b>Dimensions </b></div>
+
+                <div><b>Height: </b>{{height}}</div>
+                <div><b>Width: </b>{{width}}</div>
+                <div><b>Depth: </b>{{depthe}}</div>
+                {{/with}}
+
+            </span>
+
+            <span class="badge text-bg-warning">
+
+                <div><b>Operating_system: </b>{{operating_system}}</div>
+
+            </span>
+
+            <span class="badge text-bg-warning">
+
+                <div>
+                    <div class="pb-2">
+                        <b>Accessories: </b>
+                    </div>
+                    {{#each accessories}}
+                    <div>{{name}}</div>
+                    <div><b>Price: </b>{{price}}</div>
+                    {{/each}}
+                </div>
+
+            </span>
+
+            {{/with}}
+
+        </button>
+
+    </section>
+
+</main>

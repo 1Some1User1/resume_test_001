@@ -12,7 +12,9 @@ router.get('/', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('index', {})
+  res.render('index', {
+    layout: 'index',
+  })
   //                  ↑↑ сюди вводимо JSON дані
 })
 
@@ -82,13 +84,39 @@ router.get('/summary', function (req, res) {
   })
 })
 
-router.get('/', function (req, res) {
-  // res.render генерує нам HTML сторінку
+// router.get('/', function (req, res) {
+//   // res.render генерує нам HTML сторінку
 
-  //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('index', {})
-  //                  ↑↑ сюди вводимо JSON дані
-})
+//   //            ↙ cюди вводимо назву файлу з сontainer
+//   res.render('index', {
+//     layout: 'index',
+
+//     // name: [
+//     //   {
+//     //     text: 'car',
+//     //   },
+//     //   {
+//     //     text: 'aducation',
+//     //   },
+//     //   {
+//     //     text: '',
+//     //   },
+//     //   {
+//     //     text: 'car',
+//     //   },
+//     //   {
+//     //     text: 'car',
+//     //   },
+//     //   {
+//     //     text: 'car',
+//     //   },
+//     //   {
+//     //     text: 'car',
+//     //   },
+//     // ],
+//   })
+//   //                  ↑↑ сюди вводимо JSON дані
+// })
 
 // ================================================================
 
