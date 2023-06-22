@@ -1,357 +1,347 @@
-<div>
+<main class="p-5">
 
-    <main>
+    <div>
+
+        <h1>{{make}} {{model}}</h2>
+    </div>
+    <div><strong>Year: </strong>{{year}}</div>
+    <div>
+        <strong>Color: </strong>
+        {{color}}
+    </div>
+
+    <section class="mt-4">
+        {{#with features}}
 
         <div>
 
-            <h1>{{make}} {{model}}</h2>
-        </div>
-        <div><strong>Year: </strong>{{year}}</div>
-        <div>
-            <strong>Color: </strong>
-            {{color}}
-        </div>
-
-        <br>
-
-        <section>
-            {{#with features}}
-
-            <div>
-
-                <button type="button" class="btn btn-primary position-relative">
-
-                    <div><b>Interior: </b></div>
-
-                    {{#with interior}}
-
-                    <span class="badge text-bg-warning">
-
-                        <div><strong>Interior:</strong></div>
-
-                        <br>
-
-                        <div>
-                            {{#with seats}}
-                            <div><b>Seats: </b></div>
-                            <div><b>Material: </b>{{material}}</div>
-                            <div><b>Color: </b>{{color}}</div>
-                            <div>
-                                <div><b>Heated: </b></div>
-                                {{#if heated}}
-                                Is available
-                                {{/if}}
-                            </div>
-                            <div>
-                                <div><b>Ventilated: </b></div>
-                                {{#if ventilated}}
-                                Is available
-                                {{/if}}
-                            </div>
-                            {{/with}}
-                        </div>
-                    </span>
-
-                    <span class="badge text-bg-warning">
-                        <div>
-                            {{#with dashboard}}
-                            <div><b>Dashboard: </b></div>
-
-                            <br>
-
-                            <div><b>Material: </b>{{material}}</div>
-                            <div><b>Color: </b>{{color}}</div>
-                            <div>
-                                {{#with display}}
-                                <b>Display: </b>
-                                <div><b>Type: </b>{{type}}</div>
-                                <div><b>Size: </b>{{size}}</div>
-                                <div>
-                                    <b>Resolution: </b>
-                                    {{resolution}}
-                                </div>
-                                <div>
-                                    <b>Touchscreen: </b>
-                                    {{#if touchscreen}}
-                                    Is available
-                                    {{/if}}
-                                </div>
-                                {{/with}}
-                            </div>
-                            {{/with}}
-                        </div>
-                    </span>
-
-                    <span class="badge text-bg-warning">
-                        <div>
-                            {{#with audio}}
-                            <div><b>Audio: </b></div>
-
-                            <br>
-
-                            <div><b>System: </b>{{system}}</div>
-                            <div><b>Speakers: </b>{{speakers}}</div>
-                            <div>
-                                <b>Speakers: </b>
-                                {{#if subwoofer}}
-                                Is available
-                                {{/if}}
-                            </div>
-                            <div>
-                                <b>Subwoofer: </b>
-                                {{#if bluetooth}}
-                                Is available
-                                {{/if}}
-                            </div>
-                            <div>
-                                <b>Bluetooth: </b>
-                                {{#if USB}}
-                                Is available
-                                {{/if}}
-                            </div>
-                            {{/with}}
-                        </div>
-                    </span>
-
-                    {{/with}}
-                </button>
-
-            </div>
-
-            <br>
-
-            <div>
-
-                <button type="button" class="btn btn-primary position-relative">
-
-                    <div><b>Exterior: </b></div>
-
-                    {{#with exterior}}
-                    <span class="badge text-bg-warning">
-                        <div>
-                            <div><b>Wheels: </b></div>
-                            {{#with wheels}}
-                            <div><b>Size: </b>{{size}}</div>
-                            <div><b>Type: </b>{{type}}</div>
-                            <div>
-                                <b>Color: </b>
-                                {{color}}
-                            </div>
-                            {{/with}}
-                        </div>
-                    </span>
-
-
-                    <span class="badge text-bg-warning">
-                        <div>
-                            <div><b>Headlights: </b></div>
-                            {{#with headlights}}
-                            <div><b>Type: </b>{{type}}</div>
-                            <div><b>Brightness: </b>{{brightness}}</div>
-                            <div><b>Automatic: </b>
-                                {{#if automatic}}
-                                Is available
-                                {{/if}}
-                            </div>
-                            {{/with}}
-                        </div>
-                    </span>
-
-                    <span class="badge text-bg-warning">
-                        <div>
-                            <div><b>Sunroof: </b></div>
-                            {{#with sunroof}}
-                            <div><b>Type: </b>{{type}}</div>
-                            <div><b>Size: </b>{{size}}</div>
-                            <div>
-                                <b>Automatic: </b>
-                                {{#if automatic}}
-                                Is available
-                                {{/if}}
-                            </div>
-                            {{/with}}
-                        </div>
-                    </span>
-                    {{/with}}
-
-                </button>
-
-            </div>
-
-
-
-            <br>
-
-            <div>
-
-                <button type="button" class="btn btn-primary position-relative">
-
-                    <div><b>Safety: </b></div>
-
-                    {{#with safety}}
-
-                    <span class="badge text-bg-warning">
-                        <div>
-                            {{#with airbags}}
-                            <div><b>Airbags: </b></div>
-                            <div><b>Front: </b>{{front}}</div>
-                            <div><b>Side: </b>{{side}}</div>
-                            <div>
-                                <b>Knee: </b>
-                                {{knee}}
-                            </div>
-                            <div>
-                                <b>Rear: </b>
-                                {{rear}}
-                            </div>
-                            {{/with}}
-                        </div>
-                    </span>
-
-                    <span class="badge text-bg-warning">
-                        <div>
-                            {{#with assistance}}
-                            <div><b>Assistance: </b></div>
-                            <div>
-                                <b>Blind spot monitoring: </b>
-                                {{#if blind_spot_monitoring}}
-                                Is available
-                                {{/if}}
-                            </div>
-                            <div>
-                                <b>Rear cross traffic alert: </b>
-                                {{#if rear_cross_traffic_alert}}
-                                Is available
-                                {{/if}}
-                            </div>
-                            <div>
-                                <b>Lane departure warning: </b>
-                                {{#if lane_departure_warning}}
-                                Is available
-                                {{/if}}
-                            </div>
-                            <div>
-                                <b>Adaptive cruise control: </b>
-                                {{#if adaptive_cruise_control}}
-                                Is available
-                                {{/if}}
-                            </div>
-                            <div>
-                                <b>Collision warning: </b>
-                                {{#if collision_warning}}
-                                Is available
-                                {{/if}}
-                            </div>
-                            {{/with}}
-                        </div>
-                    </span>
-
-                    {{/with}}
-
-                </button>
-
-            </div>
-
-            {{/with}}
-
-        </section>
-
-        <section>
             <button type="button" class="btn btn-primary position-relative">
-                <div><b>Engine: </b></div>
+
+                <div class="pb-3">
+                    <b>Interior: </b>
+                </div>
+
+                {{#with interior}}
+
                 <span class="badge text-bg-warning">
-                    {{#with engine}}
+
+                    <div class="pb-2">
+                        <strong>Interior:</strong>
+                    </div>
+
+                    <div>
+                        {{#with seats}}
+                        <div><b>Seats: </b></div>
+                        <div><b>Material: </b>{{material}}</div>
+                        <div><b>Color: </b>{{color}}</div>
+                        <div>
+                            <div><b>Heated: </b></div>
+                            {{#if heated}}
+                            Is available
+                            {{/if}}
+                        </div>
+                        <div>
+                            <div><b>Ventilated: </b></div>
+                            {{#if ventilated}}
+                            Is available
+                            {{/if}}
+                        </div>
+                        {{/with}}
+                    </div>
+                </span>
+
+                <span class="badge text-bg-warning">
+                    <div>
+                        {{#with dashboard}}
+                        <div class="pb-2">
+                            <b>Dashboard: </b>
+                        </div>
+
+                        <div><b>Material: </b>{{material}}</div>
+                        <div><b>Color: </b>{{color}}</div>
+                        <div>
+                            {{#with display}}
+                            <b>Display: </b>
+                            <div><b>Type: </b>{{type}}</div>
+                            <div><b>Size: </b>{{size}}</div>
+                            <div>
+                                <b>Resolution: </b>
+                                {{resolution}}
+                            </div>
+                            <div>
+                                <b>Touchscreen: </b>
+                                {{#if touchscreen}}
+                                Is available
+                                {{/if}}
+                            </div>
+                            {{/with}}
+                        </div>
+                        {{/with}}
+                    </div>
+                </span>
+
+                <span class="badge text-bg-warning">
+                    <div>
+                        {{#with audio}}
+                        <div class="pb-2">
+                            <b>Audio: </b>
+                        </div>
+
+                        <div><b>System: </b>{{system}}</div>
+                        <div><b>Speakers: </b>{{speakers}}</div>
+                        <div>
+                            <b>Speakers: </b>
+                            {{#if subwoofer}}
+                            Is available
+                            {{/if}}
+                        </div>
+                        <div>
+                            <b>Subwoofer: </b>
+                            {{#if bluetooth}}
+                            Is available
+                            {{/if}}
+                        </div>
+                        <div>
+                            <b>Bluetooth: </b>
+                            {{#if USB}}
+                            Is available
+                            {{/if}}
+                        </div>
+                        {{/with}}
+                    </div>
+                </span>
+
+                {{/with}}
+            </button>
+
+        </div>
+
+        <div class="mt-4">
+
+            <button type="button" class="btn btn-primary position-relative">
+
+                <div class="pb-3"><b>Exterior: </b></div>
+
+                {{#with exterior}}
+                <span class="badge text-bg-warning">
+                    <div>
+                        <div class="pb-2"><b>Wheels: </b></div>
+                        {{#with wheels}}
+                        <div><b>Size: </b>{{size}}</div>
+                        <div><b>Type: </b>{{type}}</div>
+                        <div>
+                            <b>Color: </b>
+                            {{color}}
+                        </div>
+                        {{/with}}
+                    </div>
+                </span>
+
+
+                <span class="badge text-bg-warning">
+                    <div>
+                        <div class="pb-2"><b>Headlights: </b></div>
+                        {{#with headlights}}
+                        <div><b>Type: </b>{{type}}</div>
+                        <div><b>Brightness: </b>{{brightness}}</div>
+                        <div><b>Automatic: </b>
+                            {{#if automatic}}
+                            Is available
+                            {{/if}}
+                        </div>
+                        {{/with}}
+                    </div>
+                </span>
+
+                <span class="badge text-bg-warning">
+                    <div>
+                        <div class="pb-2"><b>Sunroof: </b></div>
+                        {{#with sunroof}}
+                        <div><b>Type: </b>{{type}}</div>
+                        <div><b>Size: </b>{{size}}</div>
+                        <div>
+                            <b>Automatic: </b>
+                            {{#if automatic}}
+                            Is available
+                            {{/if}}
+                        </div>
+                        {{/with}}
+                    </div>
+                </span>
+                {{/with}}
+
+            </button>
+
+        </div>
+
+        <div class="pt-4">
+
+            <button type="button" class="btn btn-primary position-relative">
+
+                <div class="pb-3"><b>Safety: </b></div>
+
+                {{#with safety}}
+
+                <span class="badge text-bg-warning">
+                    <div>
+                        {{#with airbags}}
+                        <div class="pb-2"><b>Airbags: </b></div>
+                        <div><b>Front: </b>{{front}}</div>
+                        <div><b>Side: </b>{{side}}</div>
+                        <div>
+                            <b>Knee: </b>
+                            {{knee}}
+                        </div>
+                        <div>
+                            <b>Rear: </b>
+                            {{rear}}
+                        </div>
+                        {{/with}}
+                    </div>
+                </span>
+
+                <span class="badge text-bg-warning">
+                    <div>
+                        {{#with assistance}}
+                        <div class="pb-2"><b>Assistance: </b></div>
+                        <div>
+                            <b>Blind spot monitoring: </b>
+                            {{#if blind_spot_monitoring}}
+                            Is available
+                            {{/if}}
+                        </div>
+                        <div>
+                            <b>Rear cross traffic alert: </b>
+                            {{#if rear_cross_traffic_alert}}
+                            Is available
+                            {{/if}}
+                        </div>
+                        <div>
+                            <b>Lane departure warning: </b>
+                            {{#if lane_departure_warning}}
+                            Is available
+                            {{/if}}
+                        </div>
+                        <div>
+                            <b>Adaptive cruise control: </b>
+                            {{#if adaptive_cruise_control}}
+                            Is available
+                            {{/if}}
+                        </div>
+                        <div>
+                            <b>Collision warning: </b>
+                            {{#if collision_warning}}
+                            Is available
+                            {{/if}}
+                        </div>
+                        {{/with}}
+                    </div>
+                </span>
+
+                {{/with}}
+
+            </button>
+
+        </div>
+
+        {{/with}}
+
+    </section>
+
+    <section class="pt-4">
+        <button type="button" class="btn btn-primary position-relative">
+            <div class="pb-2"><b>Engine: </b></div>
+            <span class="badge text-bg-warning">
+                {{#with engine}}
+                <div>
+                    <b>Type: </b>
+                    {{type}}
+                </div>
+                <div>
+                    <b>Displacement: </b>
+                    {{displacement}}
+                </div>
+                <div>
+                    <b>Horsepower: </b>
+                    {{horsepower}}
+                </div>
+                <div>
+                    <b>Torque: </b>
+                    {{torque}}
+                </div>
+                <div>
+                    <b>Transmission: </b>
+                    {{#with transmission}}
                     <div>
                         <b>Type: </b>
                         {{type}}
                     </div>
                     <div>
-                        <b>Displacement: </b>
-                        {{displacement}}
-                    </div>
-                    <div>
-                        <b>Horsepower: </b>
-                        {{horsepower}}
-                    </div>
-                    <div>
-                        <b>Torque: </b>
-                        {{torque}}
-                    </div>
-                    <div>
-                        <b>Transmission: </b>
-                        {{#with transmission}}
-                        <div>
-                            <b>Type: </b>
-                            {{type}}
-                        </div>
-                        <div>
-                            <b>Gears: </b>
-                            {{gears}}
-                        </div>
-                        {{/with}}
+                        <b>Gears: </b>
+                        {{gears}}
                     </div>
                     {{/with}}
-                </span>
-            </button>
+                </div>
+                {{/with}}
+            </span>
+        </button>
 
-            <button type="button" class="btn btn-primary position-relative">
-                <div><b>Fuel economy: </b></div>
-                <span class="badge text-bg-warning">
-                    {{#with fuel_economy}}
+        <button type="button" class="btn btn-primary position-relative">
+            <div class="pb-2"><b>Fuel economy: </b></div>
+            <span class="badge text-bg-warning">
+                {{#with fuel_economy}}
+                <div>
+                    <b>City: </b>
+                    {{city}}
+                </div>
+                <div>
+                    <b>Highway: </b>
+                    {{highway}}
+                </div>
+                <div>
+                    <b>Combined: </b>
+                    {{combined}}
+                </div>
+                {{/with}}
+            </span>
+        </button>
+
+        <button type="button" class="btn btn-primary position-relative">
+            <div class="pb-2"><b>Price: </b></div>
+            <span class="badge text-bg-warning">
+                {{#with price}}
+                <div>
+                    <b>Base: </b>
+                    {{base}}
+                </div>
+                <div>
+                    <b>Destination: </b>
+                    {{destination}}
+                </div>
+                <div>
+                    <b>Options: </b>
+                    {{#with options}}
                     <div>
-                        <b>City: </b>
-                        {{city}}
+                        <b>Navigatione: </b>
+                        {{navigation}}
                     </div>
                     <div>
-                        <b>Highway: </b>
-                        {{highway}}
+                        <b>Moonroof: </b>
+                        {{moonroof}}
                     </div>
                     <div>
-                        <b>Combined: </b>
-                        {{combined}}
+                        <b>Premium paint: </b>
+                        {{premium_paint}}
                     </div>
                     {{/with}}
-                </span>
-            </button>
+                </div>
+                <div>
+                    <b>Total price: </b>
+                    {{total}}
+                </div>
+                {{/with}}
+            </span>
+        </button>
+    </section>
 
-            <button type="button" class="btn btn-primary position-relative">
-                <div><b>Price: </b></div>
-                <span class="badge text-bg-warning">
-                    {{#with price}}
-                    <div>
-                        <b>Base: </b>
-                        {{base}}
-                    </div>
-                    <div>
-                        <b>Destination: </b>
-                        {{destination}}
-                    </div>
-                    <div>
-                        <b>Options: </b>
-                        {{#with options}}
-                        <div>
-                            <b>Navigatione: </b>
-                            {{navigation}}
-                        </div>
-                        <div>
-                            <b>Moonroof: </b>
-                            {{moonroof}}
-                        </div>
-                        <div>
-                            <b>Premium paint: </b>
-                            {{premium_paint}}
-                        </div>
-                        {{/with}}
-                    </div>
-                    <div>
-                        <b>Total price: </b>
-                        {{total}}
-                    </div>
-                    {{/with}}
-                </span>
-            </button>
-        </section>
-
-    </main>
-
-</div>
+</main>

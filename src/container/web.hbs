@@ -1,153 +1,150 @@
-<div>
+<main class="p-5">
 
-    <main>
+    {{#with web}}
 
-        {{#with web}}
+    <div>
 
+        {{#each languages}}
         <div>
-
-            {{#each languages}}
-            <div>
-                <h1>{{name}}</h1>
+            <h1>{{name}}</h1>
+        </div>
+        <div>
+            <div><Strong>Version: </Strong>
+                {{version}}
             </div>
-            <div>
-                <div><Strong>Version: </Strong>
-                    {{version}}
-                </div>
-            </div>
-            <br>
-            <div>
-                <q>{{description}}</q>
-            </div>
-
-            <br>
-
-            {{#if elements}}
-            <div><strong><big>Elements: </big></strong></div>
-            {{else}}
-            <div>
-                {{#if properties}}
-                <div><strong><big>Properties: </big></strong></div>
-                {{else}}
-                <div><strong><big>Functions: </big></strong></div>
-                {{/if}}
-            </div>
-            {{/if}}
-
-
-            <section>
-
-                <div>
-
-                    {{#each elements}}
-
-                    <div>
-                        <div><b>Type: </b>{{name}}</div>
-                        <div>
-                            <b>Description: </b><q>{{description}}</q>
-                        </div>
-
-                        <section>
-                            <div><b>Attributes: </b></div>
-                            <ul>
-                                {{#each attributes}}
-                                <div>
-                                    <li>
-                                        <div>
-                                            <b>{{name}}</b> - <q>{{description}}</q>
-                                        </div>
-                                    </li>
-                                </div>
-                                {{/each}}
-                            </ul>
-                        </section>
-
-                    </div>
-                    {{/each}}
-                </div>
-
-
-
-                <div>
-                    {{#each properties}}
-
-                    <div>
-                        <div><b>Type: </b>{{name}}</div>
-                        <div>
-                            <b>Description: </b><q>{{description}}</q>
-                        </div>
-
-                        <section>
-                            <div><b>Values: </b></div>
-                            <ul>
-                                {{#each values}}
-                                <div>
-                                    <li>
-                                        <div>
-                                            <b>{{value}}</b> - <q>{{description}}</q>
-                                        </div>
-                                    </li>
-                                </div>
-                                {{/each}}
-                            </ul>
-                        </section>
-
-                    </div>
-                    {{/each}}
-                </div>
-
-                <div>
-
-                    {{#each functions}}
-                    <div>
-                        <div><b>Type: </b>{{name}}</div>
-                        <div>
-                            <b>Description: </b><q>{{description}}</q>
-                        </div>
-
-                        <section>
-                            <div><b>Parameters: </b></div>
-                            <ul>
-                                {{#each parameters}}
-                                <li>
-                                    <div>
-                                        <strong><q>{{name}}</q></strong>
-                                    </div>
-                                    <div>
-                                        <b>Type: </b>{{type}}
-                                    </div>
-                                    <div>
-                                        <b>Description: </b><q>{{description}}</q>
-                                    </div>
-                                </li>
-                                {{/each}}
-                            </ul>
-                        </section>
-
-                    </div>
-                    {{/each}}
-
-                </div>
-
-            </section>
-
-            {{#if elements}}
-            <hr>
-            {{else}}
-            <div>
-                {{#if properties}}
-                <hr>
-                {{else}}
-                {{/if}}
-            </div>
-            {{/if}}
-
-            {{/each}}
-
         </div>
 
-        {{/with}}
+        <div class="mt-3 mb-3">
+            <q>{{description}}</q>
+        </div>
 
-    </main>
+
+        {{#if elements}}
+        <div><strong><big>Elements: </big></strong></div>
+        {{else}}
+        <div>
+            {{#if properties}}
+            <div><strong><big>Properties: </big></strong></div>
+            {{else}}
+            <div><strong><big>Functions: </big></strong></div>
+            {{/if}}
+        </div>
+        {{/if}}
+
+
+        <section>
+
+            <div>
+
+                {{#each elements}}
+
+                <div>
+                    <div><b>Type: </b>{{name}}</div>
+                    <div>
+                        <b>Description: </b><q>{{description}}</q>
+                    </div>
+
+                    <section>
+                        <div><b>Attributes: </b></div>
+                        <ul>
+                            {{#each attributes}}
+                            <div>
+                                <li>
+                                    <div>
+                                        <b>{{name}}</b> - <q>{{description}}</q>
+                                    </div>
+                                </li>
+                            </div>
+                            {{/each}}
+                        </ul>
+                    </section>
+
+                </div>
+                {{/each}}
+            </div>
+
+
+
+            <div>
+                {{#each properties}}
+
+                <div>
+                    <div><b>Type: </b>{{name}}</div>
+                    <div>
+                        <b>Description: </b><q>{{description}}</q>
+                    </div>
+
+                    <section>
+                        <div><b>Values: </b></div>
+                        <ul>
+                            {{#each values}}
+                            <div>
+                                <li>
+                                    <div>
+                                        <b>{{value}}</b> - <q>{{description}}</q>
+                                    </div>
+                                </li>
+                            </div>
+                            {{/each}}
+                        </ul>
+                    </section>
+
+                </div>
+                {{/each}}
+            </div>
+
+            <div>
+
+                {{#each functions}}
+                <div>
+                    <div><b>Type: </b>{{name}}</div>
+                    <div>
+                        <b>Description: </b><q>{{description}}</q>
+                    </div>
+
+                    <section>
+                        <div><b>Parameters: </b></div>
+                        <ul>
+                            {{#each parameters}}
+                            <li>
+                                <div>
+                                    <strong><q>{{name}}</q></strong>
+                                </div>
+                                <div>
+                                    <b>Type: </b>{{type}}
+                                </div>
+                                <div>
+                                    <b>Description: </b><q>{{description}}</q>
+                                </div>
+                            </li>
+                            {{/each}}
+                        </ul>
+                    </section>
+
+                </div>
+                {{/each}}
+
+            </div>
+
+        </section>
+
+        {{#if elements}}
+        <hr>
+        {{else}}
+        <div>
+            {{#if properties}}
+            <hr>
+            {{else}}
+            {{/if}}
+        </div>
+        {{/if}}
+
+        {{/each}}
+
+    </div>
+
+    {{/with}}
+
+</main>
 
 </div>

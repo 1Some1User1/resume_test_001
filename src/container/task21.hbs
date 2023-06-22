@@ -1,4 +1,4 @@
-<main>
+<main class="p-5">
     <div class="card">
         <div class="card-body">
 
@@ -15,14 +15,17 @@
                         </div>
                         <div>
                             {{#with button_text}}
-                            <button class="btn btn-primary">
-                                <div>{{solid}}</div>
-                            </button>
-                            <br>
-                            <br>
-                            <button class="btn btn-outline-primary">
-                                <div>{{outline}}</div>
-                            </button>
+                            <div>
+                                <button class="btn btn-primary">
+                                    <div>{{solid}}</div>
+                                </button>
+                            </div>
+
+                            <div class="pt-3">
+                                <button class="btn btn-outline-primary">
+                                    <div>{{outline}}</div>
+                                </button>
+                            </div>
                             {{/with}}
                         </div>
                         {{/with}}
@@ -30,9 +33,8 @@
                 </div>
             </div>
 
-            <br>
 
-            <div class="card">
+            <div class="card mt-3">
                 <div class="card-body">
                     {{#with second}}
                     <div>
@@ -43,23 +45,24 @@
                     </div>
                     <div>
                         {{#with button_text}}
-                        <button class="btn btn-secondary">
-                            <div>{{solid}}</div>
-                        </button>
-                        <br>
-                        <br>
-                        <button class="btn btn-outline-secondary">
-                            <div>{{outline}}</div>
-                        </button>
+                        <div>
+                            <button class="btn btn-secondary">
+                                <div>{{solid}}</div>
+                            </button>
+                        </div>
+
+                        <div class="pt-3">
+                            <button class="btn btn-outline-secondary">
+                                <div>{{outline}}</div>
+                            </button>
+                        </div>
                         {{/with}}
                     </div>
                     {{/with}}
                 </div>
             </div>
 
-            <br>
-
-            <div class="card">
+            <div class="card mt-3">
                 <div class="card-body">
 
                     {{#with subblock}}
@@ -71,14 +74,17 @@
                     </div>
                     <div>
                         {{#with button_text}}
-                        <button class="btn btn-dark">
-                            <div>{{solid}}</div>
-                        </button>
-                        <br>
-                        <br>
-                        <button class="btn btn-outline-dark">
-                            <div>{{outline}}</div>
-                        </button>
+                        <div>
+                            <button class="btn btn-dark">
+                                <div>{{solid}}</div>
+                            </button>
+                        </div>
+
+                        <div class="pt-3">
+                            <button class="btn btn-outline-dark">
+                                <div>{{outline}}</div>
+                            </button>
+                        </div>
                         {{/with}}
                     </div>
                     {{/with}}
@@ -88,9 +94,7 @@
         </div>
     </div>
 
-    <br>
-
-    <div class="card">
+    <div class="card mt-4">
         <div class="card-body">
 
             {{#with nested_display}}
@@ -117,9 +121,7 @@
                 </div>
             </div>
 
-            <br>
-
-            <div>
+            <div class="mt-4">
                 <h6 class="text-heading">{{title}}</h6>
             </div>
 
@@ -134,9 +136,7 @@
         </div>
     </div>
 
-    <br>
-
-    <div class="card">
+    <div class="card mt-4">
         <div class="card-body">
 
             <div>
@@ -153,9 +153,9 @@
                     {{/with}}
                 </div>
 
-                <br>
 
-                <div class="card">
+
+                <div class="card pt-3">
                     <div class="card-body">
                         <div>
                             {{#each list_name}}

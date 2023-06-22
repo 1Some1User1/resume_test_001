@@ -1,133 +1,127 @@
-<div>
+<main class="p-5">
 
-    <main>
+    <div>
+        <h1>{{name}}</h1>
+    </div>
+    <div>
+        <strong><q>{{description}}</q></strong>
+    </div>
 
-        <div>
-            <h1>{{name}}</h1>
-        </div>
-        <div><strong><q>{{description}}</q></strong></div>
+    <div class="mt-5">
+        <div><strong>Histiry: </strong></div>
+        {{#with history}}
+        <div><b>Year: </b>{{year}}</div>
+        <div><b>Founder: </b>{{founder}}</div>
+        {{/with}}
+    </div>
 
-        <br>
+    <div class="mt-4">
+        <section>
 
-        <div>
-            <div><strong>Histiry: </strong></div>
-            {{#with history}}
-            <div><b>Year: </b>{{year}}</div>
-            <div><b>Founder: </b>{{founder}}</div>
-            {{/with}}
-        </div>
-
-        <br>
-
-        <div>
-            <section>
-
-                <button type="button" class="btn btn-primary position-relative">
-                    <div><strong>Types: </strong></div>
-                    <span class="badge text-bg-primary">
-                        <ul>
-                            {{#each types}}
-                            <li>
-                                <div>{{this}}</div>
-                            </li>
-                            {{/each}}
-                        </ul>
-                    </span>
-                </button>
-
-                <button type="button" class="btn btn-secondary position-relative">
-                    <div>
-                        <div>
-                            <big><strong>Syntax: </strong></big>
-                        </div>
-                        {{#with syntax}}
-                        <div>
-                            <b>Variables</b> -
-                            {{#each variables}}
-                            {{this}},
-                            {{/each}}
-                        </div>
-                        <div>
-                            <b>Functions</b> -
-                            {{#each functions}}
-                            {{this}},
-                            {{/each}}
-                        </div>
-                        <div>
-                            <b>Conditionals</b> -
-                            {{#each conditionals}}
-                            {{this}},
-                            {{/each}}
-                        </div>
-                        <div>
-                            <b>Loops</b> -
-                            {{#each loops}}
-                            {{this}},
-                            {{/each}}
-                        </div>
-                        <div>
-                            <b>Classes</b> -
-                            {{#each classes}}
-                            {{this}},
-                            {{/each}}
-                        </div>
-                        {{/with}}
-                    </div>
-                </button>
-
-
-                <button type="button" class="btn btn-success position-relative">
-                    <div>
-                        <big> <strong>Features: </strong> </big>
-                    </div>
+            <button type="button" class="btn btn-primary position-relative">
+                <div><strong>Types: </strong></div>
+                <span class="badge text-bg-primary">
                     <ul>
-                        {{#each features}}
+                        {{#each types}}
                         <li>
                             <div>{{this}}</div>
                         </li>
                         {{/each}}
                     </ul>
-                </button>
+                </span>
+            </button>
 
-                <button type="button" class="btn btn-danger position-relative">
-                    <div>
-                        <big> <strong>Libraries: </strong> </big>
-                    </div>
-                    <ul>
-                        {{#each libraries}}
-                        <li>
-                            <div>{{this}}</div>
-                        </li>
-                        {{/each}}
-                    </ul>
-                </button>
-
-                <button type="button" class="btn btn-warning position-relative">
-                    <div>
-                        <big> <strong>Tools: </strong> </big>
-                    </div>
-                    <ul>
-                        {{#each tools}}
-                        <li>
-                            <div>{{this}}</div>
-                        </li>
-                        {{/each}}
-                    </ul>
-                </button>
-
-            </section>
-
-            <section>
+            <button type="button" class="btn btn-secondary position-relative">
                 <div>
-                    <big> <strong>Сommunity: </strong> </big>
+                    <div>
+                        <big><strong>Syntax: </strong></big>
+                    </div>
+                    {{#with syntax}}
+                    <div>
+                        <b>Variables</b> -
+                        {{#each variables}}
+                        {{this}},
+                        {{/each}}
+                    </div>
+                    <div>
+                        <b>Functions</b> -
+                        {{#each functions}}
+                        {{this}},
+                        {{/each}}
+                    </div>
+                    <div>
+                        <b>Conditionals</b> -
+                        {{#each conditionals}}
+                        {{this}},
+                        {{/each}}
+                    </div>
+                    <div>
+                        <b>Loops</b> -
+                        {{#each loops}}
+                        {{this}},
+                        {{/each}}
+                    </div>
+                    <div>
+                        <b>Classes</b> -
+                        {{#each classes}}
+                        {{this}},
+                        {{/each}}
+                    </div>
+                    {{/with}}
                 </div>
-                {{#each community}}
-                <button type="{{type}}" class="btn btn-link">{{name}}</button>
-                {{/each}}
-            </section>
+            </button>
 
-        </div>
 
-    </main>
+            <button type="button" class="btn btn-success position-relative">
+                <div>
+                    <big> <strong>Features: </strong> </big>
+                </div>
+                <ul>
+                    {{#each features}}
+                    <li>
+                        <div>{{this}}</div>
+                    </li>
+                    {{/each}}
+                </ul>
+            </button>
 
-</div>
+            <button type="button" class="btn btn-danger position-relative">
+                <div>
+                    <big> <strong>Libraries: </strong> </big>
+                </div>
+                <ul>
+                    {{#each libraries}}
+                    <li>
+                        <div>{{this}}</div>
+                    </li>
+                    {{/each}}
+                </ul>
+            </button>
+
+            <button type="button" class="btn btn-warning position-relative">
+                <div>
+                    <big> <strong>Tools: </strong> </big>
+                </div>
+                <ul>
+                    {{#each tools}}
+                    <li>
+                        <div>{{this}}</div>
+                    </li>
+                    {{/each}}
+                </ul>
+            </button>
+
+        </section>
+
+        <section class="mt-4">
+            <div>
+                <big> <strong>Сommunity: </strong> </big>
+            </div>
+            {{#each community}}
+            <button type="{{type}}" class="btn btn-link">{{name}}</button>
+            {{/each}}
+        </section>
+
+    </div>
+
+</main>

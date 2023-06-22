@@ -1,4 +1,4 @@
-<main>
+<main class="p-5">
 
     <div class="row gx-3 gy-3">
 
@@ -73,16 +73,17 @@
 
             {{/with}}
         </div>
-        <br>
 
-        <hr>
+        <div class="mt-4 mb-4">
+            <hr>
+        </div>
 
         <div>
             {{#with winner}}
-            <div>
+            <div class="mb-3">
                 <h2>{{title}}</h2>
             </div>
-            <br>
+
             <table class="table">
                 {{#with table}}
                 <thead>
@@ -148,7 +149,7 @@
             <div class="row">
 
                 {{#each cards}}
-                <div class="col-5">
+                <div class="col-5 mb-3">
 
 
                     <div class="card text-bg-secondary">
@@ -162,7 +163,6 @@
                     </div>
 
                 </div>
-                <br>
                 {{/each}}
             </div>
 
@@ -199,10 +199,9 @@
         <div class="col-12">
             {{#with proposition}}
             <div class="display-2">{{title}}</div>
-            <br>
-            <div class="row">
+            <div class="row mt-3">
                 {{#each card}}
-                <div class="col-6">
+                <div class="col-6 mb-3">
                     <div class="card text-bg-warning">
                         <div class="card-header">{{header}}</div>
                         <div class="card-body">
@@ -211,7 +210,6 @@
                         </div>
                     </div>
                 </div>
-                <br>
                 {{/each}}
             </div>
 
